@@ -2,9 +2,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         Calculator calc = new Calculator();
         while (true) {
-            Scanner scanner = new Scanner(System.in);
             System.out.println("На скольких человек разделить счёт?");
             int people = scanner.nextInt();
             if (people == 1) {

@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class Calculator {
     double totalPrice;
     ArrayList<Product> product;
+    Scanner scanner = new Scanner(System.in);
 
     public Calculator() {
         product = new ArrayList<>();
@@ -11,7 +12,6 @@ public class Calculator {
 
     public void add() {
         while (true) {
-            Scanner scanner = new Scanner(System.in);
             System.out.println("Введите товар:");
             String productInput = scanner.next();
             while (true) {
@@ -36,7 +36,7 @@ public class Calculator {
             System.out.println("Введите Завершить для подсчёта, или любой символ что-бы добавить еще товар");
             String end = scanner.next();
             if (end.equalsIgnoreCase("Завершить") || productInput.equalsIgnoreCase("Завершить")) {
-                System.out.println("Рассчёт завершён.");
+                System.out.println("Расчёт завершён.");
                 break;
             }
         }
