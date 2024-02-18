@@ -15,11 +15,10 @@ public class Calculator {
             System.out.println("Введите товар:");
             String productInput = scanner.next();
             while (true) {
-                Scanner scanPrice = new Scanner(System.in);
                 System.out.println("Введите цену:");
                 double priceInput = 0;
-                if (scanPrice.hasNextDouble()) {
-                    priceInput = scanPrice.nextDouble();
+                if (scanner.hasNextDouble()) {
+                    priceInput = scanner.nextDouble();
                     if (priceInput < 0) {
                         System.out.println("Цена не может быть меньше ноля");
                     } else {
@@ -30,6 +29,7 @@ public class Calculator {
                     }
                 } else {
                     System.out.println("Ошибка ввода, нужны цифры");
+                    scanner.nextLine();
                 }
             }
             System.out.println("Хотите добавить еще товар?");
@@ -47,7 +47,6 @@ public class Calculator {
 
         System.out.println("Добавленные товары");
         for (int i = 0; i < product.size(); i++) {
-
             System.out.println(product.get(i).name);
         }
         double summa = totalPrice / people;
